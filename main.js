@@ -67,6 +67,7 @@
     },
   };
 
+  const cvUrl = () => `assets/Brayan_Munoz_CV_${lang === "en" ? "EN" : "ES"}.pdf`;
   let lang = store.get("lang") || ((navigator.language || "es").startsWith("es") ? "es" : "en");
   function applyLang(l) {
     lang = l;
@@ -75,6 +76,7 @@
     $$("[data-i18n]").forEach((el) => { const v = dict[el.dataset.i18n]; if (v != null) el.innerHTML = v; });
     $("#palIn").placeholder = UI[l].palPh;
     document.title = UI[l].title;
+    $$(".cv-link").forEach((a) => { a.href = cvUrl(); });
     store.set("lang", l);
     renderCerts();
     renderPalette("");
@@ -293,7 +295,7 @@ github    <a href="https://github.com/Brayan744" target="_blank" rel="noopener">
     const t = T[lang];
     if (c === "clear") { tb.innerHTML = ""; return; }
     if (c === "lang") { applyLang(lang === "es" ? "en" : "es"); out(c, lang === "es" ? "Idioma: español" : "Language: English"); return; }
-    if (c === "cv") { out(c, t.cv); const a = document.createElement("a"); a.href = "assets/Brayan_Munoz_CV.pdf"; a.download = ""; a.click(); return; }
+    if (c === "cv") { out(c, t.cv); const a = document.createElement("a"); a.href = cvUrl(); a.download = ""; a.click(); return; }
     if (c.startsWith("sudo")) { out(c, t.sudo); return; }
     if (c === "whoami") { out(c, t.about); return; }
     if (c === "ls") { out(c, "about  skills  projects  edu  contact  cv"); return; }
@@ -316,7 +318,7 @@ github    <a href="https://github.com/Brayan744" target="_blank" rel="noopener">
     { i: "✦", es: "Ir a Certificados", en: "Go to Certificates", k: "#certificados", run: () => go("#certificados") },
     { i: "✉", es: "Ir a Contacto", en: "Go to Contact", k: "#contacto", run: () => go("#contacto") },
     { i: "⧉", es: "Copiar mi correo", en: "Copy my email", k: "email", run: copyEmail },
-    { i: "↓", es: "Descargar CV (PDF)", en: "Download CV (PDF)", k: "pdf", run: () => { const a = document.createElement("a"); a.href = "assets/Brayan_Munoz_CV.pdf"; a.download = ""; a.click(); } },
+    { i: "↓", es: "Descargar CV (PDF)", en: "Download CV (PDF)", k: "pdf", run: () => { const a = document.createElement("a"); a.href = cvUrl(); a.download = ""; a.click(); } },
     { i: "☏", es: "Escribir por WhatsApp", en: "Message on WhatsApp", k: "wa", run: () => open("https://wa.me/573115851187", "_blank", "noopener") },
     { i: "in", es: "Abrir LinkedIn", en: "Open LinkedIn", k: "linkedin", run: () => open("https://www.linkedin.com/in/brayan-de-jesus-mu%C3%B1oz-acu%C3%B1a-335444349/", "_blank", "noopener") },
     { i: "</>", es: "Abrir GitHub", en: "Open GitHub", k: "github", run: () => open("https://github.com/Brayan744", "_blank", "noopener") },
