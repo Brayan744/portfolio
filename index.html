@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brayan Muñoz · Ingeniero de Sistemas & Desarrollador</title>
+  <meta name="description" content="Brayan Muñoz — Ingeniero de Sistemas y desarrollador de software en Barranquilla, Colombia. Aplicaciones web, asistentes con IA (LLM + RAG) y automatización para negocios reales." />
+  <meta name="theme-color" content="#07090d" />
+  <meta property="og:title" content="Brayan Muñoz · Ingeniero de Sistemas & Desarrollador" />
+  <meta property="og:description" content="Aplicaciones web, asistentes con IA (LLM + RAG) y automatización para negocios reales." />
+  <meta property="og:image" content="assets/brayan.webp" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="Inicio">
+      <span class="brand-mark">BM</span>
+      <span class="brand-name">brayan<span class="accent">.dev</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+      <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+      <a href="#trayectoria" data-i18n="nav.journey">Trayectoria</a>
+      <a href="#certificados" data-i18n="nav.certs">Certificados</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="kbd-btn" id="openPalette" aria-label="Abrir buscador de comandos"><span class="kbd">Ctrl</span><span class="kbd">K</span></button>
+      <button class="lang" id="langToggle" aria-label="Cambiar idioma"><span data-l="es">ES</span><span data-l="en">EN</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <a class="status" href="#contacto"><span class="pulse"></span><span data-i18n="hero.status">Disponible para proyectos freelance</span></a>
+        <h1 class="hero-title">
+          <span class="line" data-i18n="hero.hi">Hola, soy</span>
+          <span class="line name">Brayan Muñoz</span>
+        </h1>
+        <p class="hero-role mono">&gt; <span id="typed"></span><span class="caret">▍</span></p>
+        <p class="hero-lead" data-i18n="hero.lead">Ingeniero de Sistemas. Construyo software que resuelve problemas reales: sistemas de reservas, inventarios y asistentes con inteligencia artificial — desde la idea hasta producción.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#proyectos"><span data-i18n="hero.cta1">Ver proyectos</span> <span aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="assets/Brayan_Munoz_CV.pdf" download><span data-i18n="hero.cta2">Descargar CV</span> <span aria-hidden="true">↓</span></a>
+        </div>
+        <ul class="hero-meta mono">
+          <li><span class="dim">loc</span> Barranquilla, CO</li>
+          <li><span class="dim">lang</span> ES · EN B2</li>
+          <li><span class="dim">stack</span> Python · JS · SQL</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait tilt" id="portrait">
+          <img src="assets/brayan.webp" alt="Foto de Brayan Muñoz" width="480" height="640" fetchpriority="high" />
+          <div class="scan" aria-hidden="true"></div>
+          <div class="portrait-tag mono">
+            <span class="dot"></span> brayan@unimag:~$ <span class="dim">whoami</span>
+          </div>
+          <div class="float-card fc-1 mono"><span class="ico">🎓</span><div><b data-i18n="hero.fc1a">Ingeniero de Sistemas</b><small data-i18n="hero.fc1b">Meritoria · 2026</small></div></div>
+          <div class="float-card fc-2 mono"><span class="ico">🤖</span><div><b>LLM + RAG</b><small data-i18n="hero.fc2b">Asistente con IA</small></div></div>
+          <div class="float-card fc-3 mono"><span class="ico">💈</span><div><b data-i18n="hero.fc3a">App en producción</b><small data-i18n="hero.fc3b">Cliente real</small></div></div>
+        </div>
+      </div>
+
+      <a href="#sobre-mi" class="scroll-cue mono" aria-label="Bajar"><span data-i18n="hero.scroll">scroll</span><i></i></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="track mono">
+        <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>Next.js</span><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span><span>LLMs</span><span>RAG</span><span>n8n</span><span>Kotlin</span><span>REST APIs</span><span>Git</span>
+        <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>Next.js</span><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span><span>LLMs</span><span>RAG</span><span>n8n</span><span>Kotlin</span><span>REST APIs</span><span>Git</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="sobre-mi">
+      <div class="section-head reveal">
+        <span class="eyebrow mono">01 — <span data-i18n="nav.about">Sobre mí</span></span>
+        <h2 data-i18n="about.title">Ingeniería con impacto real, no solo código.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p data-i18n="about.p1">Soy <b>Ingeniero de Sistemas de la Universidad del Magdalena</b>. Mi trabajo de grado — un chatbot con procesamiento de lenguaje natural para la comunidad académica — recibió <b>reconocimiento meritorio</b>.</p>
+          <p data-i18n="about.p2">Como desarrollador freelance acompaño a pequeños negocios de principio a fin: entiendo su problema, diseño la base de datos, construyo la solución, la pongo en producción y la mantengo. Hoy una barbería gestiona todas sus citas con un sistema que construí, y una tienda de barrio controla su inventario y pagos digitales.</p>
+          <p data-i18n="about.p3">Me apasiona la intersección entre <b>software e inteligencia artificial</b>: LLMs, RAG, automatización con n8n y APIs. Aprendo rápido, escribo documentación clara y cuido los detalles.</p>
+          <div class="stats">
+            <div class="stat"><b data-count="9">0</b><span data-i18n="about.s1">certificaciones</span></div>
+            <div class="stat"><b data-count="5" data-suffix="+">0</b><span data-i18n="about.s2">proyectos entregados</span></div>
+            <div class="stat"><b data-count="257" data-suffix="+">0</b><span data-i18n="about.s3">contribuciones en GitHub</span></div>
+            <div class="stat"><b data-count="432">0</b><span data-i18n="about.s4">horas de inglés (SENA)</span></div>
+          </div>
+        </div>
+
+        <div class="terminal reveal" id="terminal" aria-label="Terminal interactiva">
+          <div class="term-bar"><i></i><i></i><i></i><span class="mono">brayan@portfolio: ~</span></div>
+          <div class="term-body mono" id="termBody">
+            <p class="dim" data-i18n="term.hint">Escribe <b>help</b> para ver los comandos. Prueba: skills, projects, contact.</p>
+          </div>
+          <form class="term-input mono" id="termForm" autocomplete="off">
+            <label for="termIn" class="prompt">❯</label>
+            <input id="termIn" type="text" spellcheck="false" aria-label="Comando" placeholder="help" />
+          </form>
+        </div>
+      </div>
+
+      <div class="skills reveal">
+        <div class="skill-col">
+          <h3 class="mono" data-i18n="skills.lang">Lenguajes</h3>
+          <ul class="chips"><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>Kotlin</li></ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="mono" data-i18n="skills.web">Web &amp; Backend</h3>
+          <ul class="chips"><li>Next.js</li><li>React</li><li>Node.js</li><li>Angular</li><li>Tailwind</li><li>REST APIs</li></ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="mono" data-i18n="skills.data">Datos</h3>
+          <ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>SQL Server</li><li>Supabase</li><li data-i18n="skills.model">Modelado relacional</li></ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="mono" data-i18n="skills.ai">IA &amp; Automatización</h3>
+          <ul class="chips"><li>LLMs</li><li>RAG</li><li>Prompt engineering</li><li>n8n</li><li>Power Automate</li></ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="mono" data-i18n="skills.tools">Herramientas</h3>
+          <ul class="chips"><li>Git &amp; GitHub</li><li>Docker</li><li>GitHub Actions</li><li>Postman</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="proyectos">
+      <div class="section-head reveal">
+        <span class="eyebrow mono">02 — <span data-i18n="nav.projects">Proyectos</span></span>
+        <h2 data-i18n="proj.title">Cosas que he construido.</h2>
+        <p class="section-sub" data-i18n="proj.sub">Proyectos reales con clientes reales, y la investigación que me llevó a la inteligencia artificial.</p>
+      </div>
+
+      <div class="bento">
+        <article class="card project p-feature reveal" data-glow>
+          <div class="p-top">
+            <span class="badge live"><span class="pulse"></span><span data-i18n="proj.live">En producción</span></span>
+            <span class="p-idx mono">/01</span>
+          </div>
+          <h3>JMbarber Studio</h3>
+          <p data-i18n="proj.jm">PWA de reservas para una barbería real. Los clientes agendan solos, el barbero administra su agenda, horarios VIP y bloqueos, y todos reciben recordatorios push automáticos.</p>
+          <div class="mock" aria-hidden="true">
+            <div class="mock-head"><b>JMbarber</b><span data-i18n="proj.cut">Corte profesional</span></div>
+            <div class="mock-days"><span data-i18n="d.mon">Lun</span><span class="on" data-i18n="d.tue">Mar</span><span data-i18n="d.wed">Mié</span><span data-i18n="d.thu">Jue</span><span data-i18n="d.fri">Vie</span></div>
+            <div class="mock-slots"><span>9:00</span><span class="taken">10:00</span><span class="on">11:00</span><span>14:00</span><span class="taken">15:00</span><span>16:00</span></div>
+            <div class="mock-push">🔔 <span data-i18n="proj.push">Recordatorio: tu cita es mañana a las 11:00</span></div>
+          </div>
+          <ul class="tags mono"><li>JavaScript</li><li>Supabase</li><li>PostgreSQL</li><li>Web Push</li><li>GitHub Actions</li></ul>
+          <a class="p-link" href="https://github.com/Brayan744/JMbBarbersStudio" target="_blank" rel="noopener"><span data-i18n="proj.code">Ver código</span> ↗</a>
+        </article>
+
+        <article class="card project p-ai reveal" data-glow>
+          <div class="p-top">
+            <span class="badge gold"><span data-i18n="proj.merit">Reconocimiento meritorio</span></span>
+            <span class="p-idx mono">/02</span>
+          </div>
+          <h3 data-i18n="proj.thesis">Chatbot con PLN · Tesis</h3>
+          <p data-i18n="proj.ai">Asistente virtual para la comunidad académica de Ingeniería de Sistemas (Unimagdalena). Usa LLMs con Retrieval-Augmented Generation para responder con información institucional; evalué sus respuestas en precisión y alucinaciones.</p>
+          <div class="chat" aria-hidden="true">
+            <div class="msg user" data-i18n="proj.q">¿Cuándo abren inscripciones de electivas?</div>
+            <div class="msg bot"><span class="src mono" data-i18n="proj.src">RAG · 3 fuentes</span><span data-i18n="proj.a">Según el calendario académico, del 3 al 7 de febrero en la plataforma institucional.</span></div>
+          </div>
+          <ul class="tags mono"><li>Python</li><li>LLM APIs</li><li>RAG</li><li>REST</li></ul>
+        </article>
+
+        <article class="card project p-camino reveal" data-glow>
+          <div class="p-top"><span class="badge">Next.js 14</span><span class="p-idx mono">/03</span></div>
+          <h3>Camino de la Palabra</h3>
+          <p data-i18n="proj.camino">App de estudio bíblico en pareja: progreso por capítulo, chat por capítulo con fotos y notas de voz, rachas, mapas y líneas de tiempo.</p>
+          <ul class="tags mono"><li>React</li><li>PostgreSQL</li><li>Docker</li><li>PWA</li></ul>
+          <a class="p-link" href="https://github.com/Brayan744/Camino" target="_blank" rel="noopener"><span data-i18n="proj.code">Ver código</span> ↗</a>
+        </article>
+
+        <article class="card project p-store reveal" data-glow>
+          <div class="p-top"><span class="badge" data-i18n="proj.client">Cliente</span><span class="p-idx mono">/04</span></div>
+          <h3 data-i18n="proj.storeT">Inventario &amp; Ventas</h3>
+          <p data-i18n="proj.store">Sistema para una tienda de barrio: inventario en tiempo real, ventas y pagos electrónicos (Nequi y transferencias) con trazabilidad completa.</p>
+          <div class="bars" aria-hidden="true"><i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:52%"></i><i style="--h:80%"></i><i style="--h:70%"></i><i style="--h:92%"></i></div>
+          <ul class="tags mono"><li>SQL</li><li data-i18n="proj.dm">Modelado de datos</li></ul>
+        </article>
+
+        <article class="card project p-sec reveal" data-glow>
+          <div class="p-top"><span class="badge">Security</span><span class="p-idx mono">/05</span></div>
+          <h3>RESTaurant API Security</h3>
+          <p data-i18n="proj.sec">Práctica de seguridad en APIs: encontrar y corregir vulnerabilidades en una API REST intencionalmente vulnerable.</p>
+          <ul class="tags mono"><li>Python</li><li>API security</li></ul>
+          <a class="p-link" href="https://github.com/Brayan744/proyecto-Damn-Vulnerable-RESTaurant-API-Game-personal" target="_blank" rel="noopener"><span data-i18n="proj.code">Ver código</span> ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section" id="trayectoria">
+      <div class="section-head reveal">
+        <span class="eyebrow mono">03 — <span data-i18n="nav.journey">Trayectoria</span></span>
+        <h2 data-i18n="jour.title">El camino hasta aquí.</h2>
+      </div>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="t-date mono">2025 — <span data-i18n="jour.now">Hoy</span></span>
+          <h3 data-i18n="jour.fl">Desarrollador de Software Freelance</h3>
+          <p data-i18n="jour.flp">Sistemas a medida para negocios: reservas para barbería (en producción), inventario y ventas para tienda. Ciclo completo: requisitos, base de datos, desarrollo, pruebas, despliegue, capacitación y soporte.</p>
+        </li>
+        <li class="reveal">
+          <span class="t-date mono">2021 — 2026</span>
+          <h3 data-i18n="jour.ing">Ingeniería de Sistemas · Universidad del Magdalena</h3>
+          <p data-i18n="jour.ingp">Grado el 4 de septiembre de 2026. Pasantía de investigación con reconocimiento meritorio: chatbot basado en PLN como asistente virtual para la comunidad académica.</p>
+        </li>
+        <li class="reveal">
+          <span class="t-date mono">2024 — 2026</span>
+          <h3 data-i18n="jour.en">English Does Work · Niveles 1–9 · SENA</h3>
+          <p data-i18n="jour.enp">432 horas de formación en inglés, completadas en julio de 2026.</p>
+        </li>
+        <li class="reveal">
+          <span class="t-date mono">2025</span>
+          <h3 data-i18n="jour.kt">Apps Android con Kotlin · Udemy</h3>
+          <p data-i18n="jour.ktp">67,5 horas de desarrollo de aplicaciones móviles nativas.</p>
+        </li>
+        <li class="reveal">
+          <span class="t-date mono">2020</span>
+          <h3 data-i18n="jour.itsa">Técnico Laboral en Sistemas Informáticos · ITSA</h3>
+          <p data-i18n="jour.itsap">Mi primera formación técnica; ese mismo año completé el curso de Programación (60 h) del Ministerio TIC con la Universidad Tecnológica de Pereira.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section" id="certificados">
+      <div class="section-head reveal">
+        <span class="eyebrow mono">04 — <span data-i18n="nav.certs">Certificados</span></span>
+        <h2 data-i18n="cert.title">Formación que respalda el trabajo.</h2>
+        <p class="section-sub" data-i18n="cert.sub">Haz clic en cualquier certificado para verlo. Los datos personales están ocultos.</p>
+      </div>
+      <div class="filters mono" role="tablist">
+        <button class="on" data-filter="all" data-i18n="cert.all">Todos</button>
+        <button data-filter="degree" data-i18n="cert.degree">Títulos</button>
+        <button data-filter="tech" data-i18n="cert.tech">Tecnología</button>
+        <button data-filter="lang" data-i18n="cert.lang">Idiomas</button>
+        <button data-filter="other" data-i18n="cert.other">Otros</button>
+      </div>
+      <div class="certs" id="certGrid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contacto">
+      <div class="contact-card reveal" data-glow>
+        <span class="eyebrow mono">05 — <span data-i18n="nav.contact">Contacto</span></span>
+        <h2 class="big" data-i18n="contact.title">¿Tienes un proyecto en mente?</h2>
+        <p class="section-sub" data-i18n="contact.sub">Cuéntame qué necesitas. Respondo rápido y te propongo una solución clara, con tiempos y alcance definidos.</p>
+        <div class="contact-actions">
+          <button class="btn primary copy" id="copyEmail" data-email="brayanmunioz6@gmail.com"><span class="mono">brayanmunioz6@gmail.com</span> <span class="copy-label" data-i18n="contact.copy">Copiar</span></button>
+          <a class="btn ghost" href="https://wa.me/573115851187" target="_blank" rel="noopener">WhatsApp ↗</a>
+        </div>
+        <div class="socials mono">
+          <a href="https://www.linkedin.com/in/brayan-de-jesus-mu%C3%B1oz-acu%C3%B1a-335444349/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/Brayan744" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="assets/Brayan_Munoz_CV.pdf" download>CV (PDF) ↓</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span id="year"></span> Brayan Muñoz</span>
+    <span class="dim" data-i18n="footer.made">Hecho a mano en Barranquilla · HTML, CSS &amp; JS</span>
+    <a href="#top" data-i18n="footer.top">Volver arriba ↑</a>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <dialog class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Cerrar">✕</button>
+    <img id="lbImg" alt="" />
+    <p class="lb-cap mono" id="lbCap"></p>
+  </dialog>
+
+  <!-- COMMAND PALETTE -->
+  <dialog class="palette" id="palette">
+    <div class="pal-search">
+      <span class="mono dim">⌘</span>
+      <input id="palIn" type="text" placeholder="Busca una sección o acción…" aria-label="Buscar comando" autocomplete="off" />
+      <span class="kbd">Esc</span>
+    </div>
+    <ul id="palList" class="pal-list" role="listbox"></ul>
+  </dialog>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
