@@ -1,29 +1,29 @@
-# brayan.dev — Personal website
+# Personal websites
 
-Personal portfolio of **Brayan Muñoz**, Systems Engineer & Software Developer.
+This repo holds more than one website. Each one is deployed as its **own app** in Easypanel, using a different **build path**.
 
-Static site (HTML, CSS, vanilla JS) — no build step. Bilingual (ES/EN), interactive terminal, command palette (`Ctrl + K`), project bento grid, timeline and certificate gallery.
+| Site | Folder | Easypanel build path |
+|---|---|---|
+| Brayan Muñoz — brayan.dev | `/` (root) | `/` |
+| Walter Muñoz | `walter/` | `/walter` |
 
-## Run locally
-Open `index.html` in a browser, or:
+Every site is a static page served by nginx (Dockerfile + nginx.conf inside its folder). No build step.
+
+## Add another website
+1. Create a new folder, e.g. `maria/`.
+2. Put the site's `index.html` (and any assets) inside it.
+3. Copy `walter/Dockerfile` and `walter/nginx.conf` into the new folder. If the site has more files than `index.html`, add them to the `COPY` line in the Dockerfile.
+4. In Easypanel, create a new App → Source **GitHub** → repo `Brayan744/portfolio`, branch `main`, build path `/maria` → Build type **Dockerfile** → Domain on port **80** → Deploy.
+
+## Brayan's site (root)
+Static site (HTML, CSS, vanilla JS): bilingual (ES/EN), interactive terminal, command palette (`Ctrl + K`), project bento grid, timeline and certificate gallery (personal IDs redacted).
+
+```
+index.html  styles.css  main.js  assets/  Dockerfile  nginx.conf
+```
+
+Run locally:
 ```bash
 docker build -t brayan-portfolio .
 docker run -p 8080:80 brayan-portfolio
-```
-
-## Deploy on Easypanel
-1. **Create service → App**.
-2. **Source:** GitHub → `Brayan744/portfolio`, branch `main`.
-3. **Build:** Dockerfile (path `Dockerfile`).
-4. **Domains:** add your domain, container port **80**. Enable HTTPS.
-5. **Deploy**. Every push to `main` can redeploy automatically (enable *Auto Deploy*).
-
-## Structure
-```
-index.html      page markup
-styles.css      design system & layout
-main.js         i18n, terminal, palette, gallery, animations
-assets/         photo, CV, certificate previews (personal IDs redacted)
-Dockerfile      nginx image
-nginx.conf      caching & gzip
 ```
